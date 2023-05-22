@@ -23,7 +23,7 @@ plt.imshow(cv2.cvtColor(foto, cv2.COLOR_BGR2RGB))
 plt.show()
 
 # Klasifikasi
-nama_katakunci = ['MUHAMMAD']
+nama_katakunci = ['MUHAMAD']
 email_katakunci = ['@','.com', '.']
 nomorhp_katakunci = ['+62', '08']
 kantor_katakunci = ['PT.','CV']
@@ -37,7 +37,7 @@ for bbox, text, score in kata:
     # Mengubah teks menjadi huruf kecil untuk pencocokan yang tidak case-sensitive
     lowercase_text = text.lower()
     # Menghapus spasi, tanda baca, dan karakter non-digit dari teks
-    cleaned_text = re.sub(r'\D', '', '-', lowercase_text)
+    cleaned_text = re.sub(r'\D', '', lowercase_text)
 
     # Mencari kata kunci dalam teks dan mengklasifikasikannya
     if any(keyword in lowercase_text for keyword in nama_katakunci):
